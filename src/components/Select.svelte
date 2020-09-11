@@ -1,27 +1,27 @@
 <script>
   let scoops = 1;
-  let flavours = ["Mint choc chip"];
+  let happyness = ["Happy"];
 
   let valuesOfHappyness = ["Happy", "Curious", "Excited"];
 
-  function join(flavours) {
-    if (flavours.length === 1) return flavours[0];
-    return `${flavours.slice(0, -1).join(", ")} and ${
-      flavours[flavours.length - 1]
+  function join(happyness) {
+    if (happyness.length === 1) return happyness[0];
+    return `${happyness.slice(0, -1).join(", ")} and ${
+      happyness[flavours.length - 1]
     }`;
   }
 </script>
 
-<h2>Flavours</h2>
+<h2>Happyness</h2>
 
-<select multiple bind:value={flavours}>
+<select multiple bind:value={happyness}>
   {#each valuesOfHappyness as flavour}
     <option value={flavour}>{flavour}</option>
   {/each}
 </select>
 
-{#if flavours.length === 0}
+{#if happyness.length === 0}
   <p>Please select at least one value</p>
 {:else}
-  <p>You selected {join(flavours)}</p>
+  <p>You selected {join(happyness)}</p>
 {/if}

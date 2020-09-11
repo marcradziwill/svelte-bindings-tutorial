@@ -8,6 +8,7 @@
   import Select from "./components/Select.svelte";
   import ContentEditable from "./components/ContentEditable.svelte";
   import Loop from "./components/Loop.svelte";
+  import Dimentions from "./components/Dimentions.svelte";
 </script>
 
 <style>
@@ -50,4 +51,6 @@
   <ContentEditable />
   <hr />
   <Loop />
+  <hr />
+  <Dimentions />
 </main>
